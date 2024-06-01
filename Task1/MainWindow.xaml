@@ -1,0 +1,32 @@
+﻿<Window x:Class="Task1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Task1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <DockPanel>
+        <Menu DockPanel.Dock="Left">
+            <StackPanel>
+                <Button x:Name="ChooseImageButton" Content="Выбрать изображение" Height="100" Width="100" Click="ChooseImageButton_Click"/>
+                <Label Content="Параметры пера:"/>
+                <Ellipse x:Name="ExampleEllipse" Height="15" Width="15"/>
+                <Label Content="Выбор цвета:"/>
+                <Label Content="Красный:"/>
+                <Slider x:Name="RedSlider" Minimum="0" Maximum="255" ValueChanged="SliderValueChanged"/>
+                <Label Content="Зеленый:"/>
+                <Slider x:Name="GreenSlider" Minimum="0" Maximum="255" ValueChanged="SliderValueChanged"/>
+                <Label Content="Синий:"/>
+                <Slider x:Name="BlueSlider" Minimum="0" Maximum="255" ValueChanged="SliderValueChanged"/>
+                <Label Content="Выбор размера:"/>
+                <Slider x:Name="SizeSlider" Minimum="1" Value="1" Maximum="10" ValueChanged="SliderValueChanged"/>
+                <Button x:Name="OkButton" Content="Ок" Click="OkButton_Click"/>
+            </StackPanel>
+        </Menu>
+
+        <InkCanvas x:Name="WorkingFieldInkCanvas">
+            
+        </InkCanvas>
+    </DockPanel>
+</Window>
